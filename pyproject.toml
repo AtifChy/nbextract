@@ -1,0 +1,29 @@
+[project]
+name = "nbextract"
+version = "0.1.0"
+description = "Extract images and plots from Jupyter notebooks"
+readme = "README.md"
+requires-python = ">=3.10"
+license-files = ["LICENSE"]
+authors = [{ name = "Md. Iftakhar Awal Chowdhury", email = "iftakhar.awal@gmail.com" }]
+keywords = ["cli", "extract", "image", "jupyter", "notebook", "pdf"]
+dependencies = [
+  "img2pdf>=0.6.3",
+  "nbformat>=5.11.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/AtifChy/nbextract"
+Issues = "https://github.com/AtifChy/nbextract/issues"
+
+[project.scripts]
+nbextract = "nbextract.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=9.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
